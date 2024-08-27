@@ -73,6 +73,9 @@
 .img-container{
     width: 100%;
     display: flex;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 .img-container img{
     width: 100%;
@@ -80,3 +83,69 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+button{
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid;
+    border-color: #009600;
+    background: transparent;
+    text-align: center;
+    color:black;
+    cursor: pointer;
+    position: relative;
+}
+span{
+   background-color: #c1cac1;
+   width: 0%;
+   height: 100%;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   border-radius: 25px;
+   z-index: -1;
+   transition: 0.5s;
+   
+
+}
+button:hover span{
+    width: 100%;
+}
+button:hover {
+border: none;
+}
+@keyframes logorotation{
+    form{
+        transform: rotate(0);
+
+    }
+    to{
+        transform: rotate(360deg);
+
+    }
+}
+.navbar img{
+    animation-name: logorotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+@keyframes slide  {
+    0%{
+        transform: translatex(0);
+    }
+    25%{
+        transform: translateX(-25%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    75%{
+        transform: translateX(-75%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+    
